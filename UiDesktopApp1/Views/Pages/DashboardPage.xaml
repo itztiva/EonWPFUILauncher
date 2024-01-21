@@ -1,0 +1,106 @@
+﻿<Page x:Class="UiDesktopApp1.Views.Pages.DashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:UiDesktopApp1.Views.Pages"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      Title="DashboardPage"
+      mc:Ignorable="d" Width="896" Height="349">
+
+    <Grid Loaded="Page_Loaded" Margin="0,0,-62,-27">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="452*"/>
+            <ColumnDefinition Width="177*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="290*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="Label1_Copia" Margin="220,-159,56,-426" FontSize="18" Grid.ColumnSpan="4" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-89.654"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.Background>
+                <ImageBrush ImageSource="/Views/Pages/newsback.png" Opacity="0.35"/>
+            </Label.Background>
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.6,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+
+        <Label x:Name="Label2" Content="Connecting to API..." HorizontalAlignment="Left" Margin="124,225,0,0" VerticalAlignment="Top" Height="184" Width="528" FontSize="16" Background="{x:Null}" Grid.ColumnSpan="3" FontFamily="Cascadia Mono SemiBold"/>
+
+        <Grid Margin="0,10,52,-9" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ui:Button x:Name="button12"
+                       Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
+                       Content="Launch"
+                       Icon="Fluent24"
+                       Height="60"
+                       Width="218" Click="button12_Click_1" FontSize="22" FontWeight="Bold" FontFamily="Bahnschrift" Margin="288,89,0,0"
+                       MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Grid.Row="4" VerticalAlignment="Top"
+                       />
+
+            <ui:TextBox x:Name="textBox5"
+                        Grid.Row="4"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        Text="123"
+                        Width="240"
+                        FontSize="24"
+                        Margin="0,35,0,0"
+                        Visibility="Hidden" />
+
+            <ui:Button x:Name="button13"
+                       Visibility="Hidden"
+                       Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
+                       Content="Close Fortnite"
+                       Icon="Fluent24"
+                       Height="56"
+                       MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
+                       Width="218" Click="button13_Click" FontSize="22" FontWeight="Bold" FontFamily="Bahnschrift" Cursor="Hand" Margin="288,89,0,0" VerticalAlignment="Top" Grid.Row="4" />
+
+            <ui:Button x:Name="button22"
+                       Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
+                       Content="Join our Discord Server"
+                       Icon="Fluent24"
+                       Height="44"
+                       MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
+                       Width="68" Click="button22_Click" FontSize="24" FontWeight="Bold" FontFamily="Bahnschrift" Cursor="Hand" Margin="846,197,0,0" VerticalAlignment="Top" Grid.Row="4" Background="#0FFFFFFF" Foreground="White" BorderBrush="White" />
+
+            <Image x:Name="Image11" HorizontalAlignment="Left" Height="47" Margin="846,263,0,0" Grid.Row="4" VerticalAlignment="Top" Width="24" Source="/Views/Pages/71.png"/>
+
+            <ui:MenuItem HorizontalAlignment="Left" Header="Welcome Back Player!" Margin="255,-34,0,0" VerticalAlignment="Top" Height="48" Width="356" Foreground="White" FontSize="24" FontFamily="Yu Gothic UI Semibold" Grid.RowSpan="5"/>
+        </Grid>
+
+        <Image HorizontalAlignment="Left" Height="229" Margin="98,218,0,0" VerticalAlignment="Top" Width="271" Source="http://api.lunafn.xyz/images/News.jpg" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.076"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</Page>
