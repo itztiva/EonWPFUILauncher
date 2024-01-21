@@ -1,1 +1,4 @@
-test test lol
+# Eon Launcher 
+
+Made using WPFUI 
+Coded by itztiva
