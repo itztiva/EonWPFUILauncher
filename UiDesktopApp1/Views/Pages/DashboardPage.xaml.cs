@@ -21,35 +21,8 @@ using SharpCompress.Readers;
 using SharpCompress.Archives.Rar;
 using SharpCompress.Archives;
 using System.Net.Http;
+using System.Reflection.Metadata;
 
-
-class Program
-{
-    [DllImport("kernel32.dll")]
-    static extern IntPtr OpenThread(ThreadAccess dwDesiredAccess, bool bInheritHandle, uint dwThreadId);
-
-    [DllImport("kernel32.dll")]
-    static extern uint SuspendThread(IntPtr hThread);
-
-    [DllImport("kernel32.dll")]
-    static extern int ResumeThread(IntPtr hThread);
-
-    [DllImport("kernel32.dll")]
-    static extern bool CloseHandle(IntPtr hObject);
-
-    [Flags]
-    public enum ThreadAccess : uint
-    {
-        TERMINATE = 0x0001,
-        SUSPEND_RESUME = 0x0002,
-        GET_CONTEXT = 0x0008,
-        SET_CONTEXT = 0x0010,
-        SET_INFORMATION = 0x0020,
-        QUERY_INFORMATION = 0x0040,
-        SET_THREAD_TOKEN = 0x0080,
-        IMPERSONATE = 0x0100,
-        DIRECT_IMPERSONATION = 0x0200
-    }}
 namespace UiDesktopApp1.Views.Pages
 {
 
@@ -356,23 +329,41 @@ namespace UiDesktopApp1.Views.Pages
         {
             using (HttpClient client = new HttpClient())
             {
-                try
-                {
-                    string url = "http://api.lunafn.xyz/News";
-                    string content = await client.GetStringAsync(url);
+                bool success = false;
+                int retryCount = 3; 
 
-                    
-                    Dispatcher.Invoke(() =>
-                    {
-                        Label2.Content = content;
-                    });
-                }
-                catch (HttpRequestException e)
+                while (!success && retryCount > 0)
                 {
-                    // when needed lmao
+                    try
+                    {
+                        string url = "http://api.lunafn.xyz/News";
+                        string content = await client.GetStringAsync(url);
+
+                        Dispatcher.Invoke(() =>
+                        {
+                            Label2.Content = content;
+                        });
+
+                        success = true;
+                    }
+                    catch (HttpRequestException e)
+                    {
+                        await Task.Delay(2000); 
+                        retryCount--;
+
+                        if (retryCount == 0)
+                        {
+                            Dispatcher.Invoke(() =>
+                            {
+                                Label2.Content = "Unable to connect to Eon\n\nIf you see this that means that Eon\nIs Most Likely Offline\nCheck the Discord for more information.";
+                            });
+                            RPC.SetState("Unable to Connect To API", true);
+                        }
+                    }
                 }
             }
         }
+
         private void button13_Click(object sender, RoutedEventArgs e)
         {
             button13.Visibility = Visibility.Hidden;
@@ -490,11 +481,11 @@ namespace UiDesktopApp1.Views.Pages
 
                     if (!fileExists)
                     {
-                        System.Windows.MessageBox.Show("There aren't Luxury files in v9.10 folder.", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                        System.Windows.MessageBox.Show("There aren't Eon files in v12.41 folder.", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                     else
                     {
-                        System.Windows.MessageBox.Show("Luxury files have been successfully removed from the v9.10 folder!", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                        System.Windows.MessageBox.Show("Eon files have been successfully removed from the v12.41 folder!", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
             }
@@ -530,6 +521,7 @@ namespace UiDesktopApp1.Views.Pages
                             ExtractFullPath = true,
                             Overwrite = true
                         });
+
                     }
                 }
             }

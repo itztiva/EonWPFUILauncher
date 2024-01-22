@@ -13,7 +13,7 @@ namespace Luxury
         {
             client = new DiscordRpcClient("1196967148090839151");
             client.Initialize();
-            Button[] buttons = { new Button() { Label = "Discord Server", Url = "https://discord.gg/eonfn" }, new Button() { Label = "Download Launcher", Url = "https://www.google.com/search?q=not+available+at+the+moment" } };
+            Button[] buttons = { new Button() { Label = "Discord Server", Url = "https://discord.gg/eonfn" }, new Button() { Label = "Download Launcher", Url = "https://api.lunafn.xyz/Launcherdownload" } };
 
             presence = new RichPresence()
             {
@@ -24,10 +24,10 @@ namespace Luxury
 
                 Assets = new Assets()
                 {
-                    LargeImageKey = "testlogo",
-                    LargeImageText = "Project Eon",
-                    SmallImageKey = "",
-                    SmallImageText = "Relive OG Fortnite"
+                    LargeImageKey = "bigtestlogo",
+                    LargeImageText = "Join Discord.gg/eonfn To Play",
+                    SmallImageKey = "testlogo",
+                    SmallImageText = "Project Eon"
                 }
             };
             SetState("");
