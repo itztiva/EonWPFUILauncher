@@ -12,7 +12,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Views/Windows/image.jpg"/>
+            <ImageBrush ImageSource="https://api.lunafn.xyz/images/Background.png"/>
         </Grid.Background>
 
         <Grid.RowDefinitions>
