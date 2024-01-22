@@ -22,8 +22,38 @@ using SharpCompress.Archives.Rar;
 using SharpCompress.Archives;
 using System.Net.Http;
 
+
+class Program
+{
+    [DllImport("kernel32.dll")]
+    static extern IntPtr OpenThread(ThreadAccess dwDesiredAccess, bool bInheritHandle, uint dwThreadId);
+
+    [DllImport("kernel32.dll")]
+    static extern uint SuspendThread(IntPtr hThread);
+
+    [DllImport("kernel32.dll")]
+    static extern int ResumeThread(IntPtr hThread);
+
+    [DllImport("kernel32.dll")]
+    static extern bool CloseHandle(IntPtr hObject);
+
+    [Flags]
+    public enum ThreadAccess : uint
+    {
+        TERMINATE = 0x0001,
+        SUSPEND_RESUME = 0x0002,
+        GET_CONTEXT = 0x0008,
+        SET_CONTEXT = 0x0010,
+        SET_INFORMATION = 0x0020,
+        QUERY_INFORMATION = 0x0040,
+        SET_THREAD_TOKEN = 0x0080,
+        IMPERSONATE = 0x0100,
+        DIRECT_IMPERSONATION = 0x0200
+    }}
 namespace UiDesktopApp1.Views.Pages
 {
+
+
     public partial class DashboardPage : Page
     {
         private void Button_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
@@ -240,6 +270,11 @@ namespace UiDesktopApp1.Views.Pages
                         UseShellExecute = false
                     });
 
+                    foreach (Process process in Process.GetProcessesByName("FortniteClient-Win64-Shipping_EAC"))
+                    {
+                        process.Kill();
+                    }
+
                     SafeKillProcess("FortniteClient-Win64-Shipping_BE");
                     SafeKillProcess("FortniteLauncher");
                     SafeKillProcess("FortniteClient-Win64-Shipping");
@@ -300,6 +335,7 @@ namespace UiDesktopApp1.Views.Pages
                             RPC.SetState("In Launcher", true);
                             System.Windows.MessageBox.Show("Anti Cheat triggered. Please remove your unoffical Paks from \"FortniteGame\\Content\\Paks\"", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
+
                         else
                         {
                             button12.Visibility = Visibility.Hidden;
