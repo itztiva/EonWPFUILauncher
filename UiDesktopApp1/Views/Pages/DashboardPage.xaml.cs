@@ -261,6 +261,7 @@ namespace UiDesktopApp1.Views.Pages
                     proc.Start();
 
                     Inject(proc.Id, directory + "\\Redirect.dll");
+                    Inject(proc.Id, directory + "\\Engine\\Binaries\\ThridParty\\NVIDIA\\NVaftermath\\Win64\\GFSDK_Aftermath_Lib.x64.dll");
 
                     if (EmailPassError)
                     {
