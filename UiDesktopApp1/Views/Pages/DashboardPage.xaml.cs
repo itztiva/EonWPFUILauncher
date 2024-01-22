@@ -104,7 +104,7 @@ namespace UiDesktopApp1.Views.Pages
 
             System.Windows.Input.Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
 
-            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Luna");
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Eon");
             string filePath = Path.Combine(folderPath, "Settings.ini");
 
             string email = "";
@@ -113,7 +113,7 @@ namespace UiDesktopApp1.Views.Pages
 
             if (!File.Exists(filePath))
             {
-                System.Windows.MessageBox.Show("Settings not found.", "Luna Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                System.Windows.MessageBox.Show("Settings not found.", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
@@ -131,7 +131,7 @@ namespace UiDesktopApp1.Views.Pages
 
                 if (!Directory.Exists(directory + "\\FortniteGame") || !Directory.Exists(directory + "\\Engine"))
                 {
-                    System.Windows.MessageBox.Show("FortniteGame and/or Engine not found. Make sure it's the valid directory.", "Luna Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    System.Windows.MessageBox.Show("FortniteGame and/or Engine not found. Make sure it's the valid directory.", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
                 {
@@ -270,7 +270,7 @@ namespace UiDesktopApp1.Views.Pages
                         {
                             process.Kill();
                         }
-                        System.Windows.MessageBox.Show("Email and/or password and/or directory is empty.", "Luna Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                        System.Windows.MessageBox.Show("Email and/or password and/or directory is empty.", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     else
                     {
@@ -298,7 +298,7 @@ namespace UiDesktopApp1.Views.Pages
                                 }
                             }
                             RPC.SetState("In Launcher", true);
-                            System.Windows.MessageBox.Show("Anti Cheat triggered. Please remove your unoffical Paks from \"FortniteGame\\Content\\Paks\"", "Luna Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+                            System.Windows.MessageBox.Show("Anti Cheat triggered. Please remove your unoffical Paks from \"FortniteGame\\Content\\Paks\"", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
                         else
                         {
@@ -360,7 +360,7 @@ namespace UiDesktopApp1.Views.Pages
             {
                 process.Kill();
             }
-            System.Windows.MessageBox.Show("Fortnite has been successfully shut down!", "Luna Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+            System.Windows.MessageBox.Show("Fortnite has been successfully shut down!", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void button16_Click(object sender, RoutedEventArgs e)
@@ -411,7 +411,7 @@ namespace UiDesktopApp1.Views.Pages
             {
                 if (!Directory.Exists(directory + "\\FortniteGame") || !Directory.Exists(directory + "\\Engine"))
                 {
-                    System.Windows.MessageBox.Show("FortniteGame and/or Engine not found. Make sure it's the valid directory.", "Luna Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    System.Windows.MessageBox.Show("FortniteGame and/or Engine not found. Make sure it's the valid directory.", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
                 {
@@ -454,17 +454,17 @@ namespace UiDesktopApp1.Views.Pages
 
                     if (!fileExists)
                     {
-                        System.Windows.MessageBox.Show("There aren't Luxury files in v9.10 folder.", "Luna Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                        System.Windows.MessageBox.Show("There aren't Luxury files in v9.10 folder.", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                     else
                     {
-                        System.Windows.MessageBox.Show("Luxury files have been successfully removed from the v9.10 folder!", "Luna Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                        System.Windows.MessageBox.Show("Luxury files have been successfully removed from the v9.10 folder!", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
             }
             else
             {
-                System.Windows.MessageBox.Show("Directory not found.", "Luna Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                System.Windows.MessageBox.Show("Directory not found.", "Eon Launcher", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void Darkbox_Checked(object sender, RoutedEventArgs e)

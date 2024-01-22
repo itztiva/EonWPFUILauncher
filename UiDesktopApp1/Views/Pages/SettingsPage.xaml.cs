@@ -115,7 +115,7 @@ namespace UiDesktopApp1.Views.Pages
 
         private void button12_Click_1(object sender, RoutedEventArgs e)
         {
-            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Luna");
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Eon");
             string filePath = Path.Combine(folderPath, "Settings.ini");
             string email = textBox1.Text;
             string password = textBox2.Text;
@@ -154,7 +154,7 @@ namespace UiDesktopApp1.Views.Pages
 
         private void LoadSettings()
         {
-            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Luna");
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Eon");
             string filePath = Path.Combine(folderPath, "Settings.ini");
 
             if (File.Exists(filePath))
@@ -214,7 +214,7 @@ namespace UiDesktopApp1.Views.Pages
         {
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
-                FileName = "https://cdn.fnbuilds.services/4.5.rar",
+                FileName = "https://cdn.fnbuilds.services/Fortnite%2012.41.zip",
                 UseShellExecute = true
             });
         }
@@ -223,7 +223,7 @@ namespace UiDesktopApp1.Views.Pages
         {
             System.Windows.Input.Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
 
-            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Luna");
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Eon");
             string filePath = Path.Combine(folderPath, "Settings.ini");
             string directory = "";
 
