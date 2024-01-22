@@ -54,35 +54,34 @@ namespace UiDesktopApp1.Views.Pages
             // Create a SaveFileDialog
             Microsoft.Win32.SaveFileDialog saveFileDialog = new Microsoft.Win32.SaveFileDialog();
 
-            // Set the file dialog filters and default extension
+           
             saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
             saveFileDialog.DefaultExt = ".txt";
 
-            // Show the dialog and wait for the user's input
+            
             bool? result = saveFileDialog.ShowDialog();
 
-            // If the user clicks "Save" and provides a valid file name
+           
             if (result == true)
             {
-                // Get the selected file name
+                
                 string filePath = saveFileDialog.FileName;
 
                 try
                 {
-                    // Here, you can write your code to save data to the selected file
-                    // For example, you can use StreamWriter to write some text to the file
+                   
                     using (System.IO.StreamWriter file = new System.IO.StreamWriter(filePath))
                     {
                         file.WriteLine("This is the content that will be saved to the file.");
-                        // You can write more content here as needed
+                        
                     }
 
-                    // Optionally, you can display a success message to the user
+                    
                     System.Windows.MessageBox.Show("File saved successfully!");
                 }
                 catch (Exception ex)
                 {
-                    // Handle any exceptions that may occur during the file saving process
+                    
                     System.Windows.MessageBox.Show("An error occurred while saving the file: " + ex.Message);
                 }
             }
@@ -123,13 +122,13 @@ namespace UiDesktopApp1.Views.Pages
 
             if (!Directory.Exists(folderPath))
             {
-                // Create the folder if it does not exist
+               
                 Directory.CreateDirectory(folderPath);
             }
 
             if (!File.Exists(filePath) || !File.ReadAllText(filePath).Contains("[Account]\nEmail=\nPassword=\nDirectory=\nAccountId=123"))
             {
-                // Create the file if it does not exist or if it does not contain the expected content
+               
                 File.WriteAllText(filePath, "[Account]\nEmail=\nPassword=\nDirectory=\nAccountId=123");
             }
 
