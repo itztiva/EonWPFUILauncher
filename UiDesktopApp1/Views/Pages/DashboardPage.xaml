@@ -89,7 +89,7 @@
             <ui:MenuItem HorizontalAlignment="Left" Header="Welcome Back Player!" Margin="255,-34,0,0" VerticalAlignment="Top" Height="48" Width="356" Foreground="White" FontSize="24" FontFamily="Yu Gothic UI Semibold" Grid.RowSpan="5"/>
         </Grid>
 
-        <Image HorizontalAlignment="Left" Height="229" Margin="98,218,0,0" VerticalAlignment="Top" Width="271" Source="http://api.lunafn.xyz/images/News.jpg" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1">
+        <Image HorizontalAlignment="Left" Height="229" Margin="98,218,0,0" VerticalAlignment="Top" Width="271" Source="https://api.lunafn.xyz/images/News.jpg" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
