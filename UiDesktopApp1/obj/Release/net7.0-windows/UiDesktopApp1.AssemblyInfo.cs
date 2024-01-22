@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Luna")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39bf6a74ba57b1652de46a2d908af9f098535b9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e6393c3903b774de270dd01998bfbea1f4bd664")]
 [assembly: System.Reflection.AssemblyProductAttribute("Luna Launcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Luna")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
