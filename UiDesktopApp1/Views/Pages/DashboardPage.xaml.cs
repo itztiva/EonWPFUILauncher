@@ -296,7 +296,7 @@ namespace UiDesktopApp1.Views.Pages
                     }
                     else
                     {
-                        if (Directory.GetFiles(directoryPath).Length > 12)
+                        if (Directory.GetFiles(directoryPath).Length > 54)
                         {
                             {
                                 button13.Visibility = Visibility.Hidden;
