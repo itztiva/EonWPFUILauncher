@@ -2,4 +2,4 @@
 
 Made using WPFUI 
 Coded by itztiva
-Being used by Eon Only.
+Being used by Eon Only for now.
