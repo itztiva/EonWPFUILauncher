@@ -22,6 +22,8 @@ using SharpCompress.Archives.Rar;
 using SharpCompress.Archives;
 using System.Net.Http;
 using System.Reflection.Metadata;
+using System.Windows.Shapes;
+using UiDesktopApp1.Utils;
 
 namespace UiDesktopApp1.Views.Pages
 {
@@ -107,8 +109,8 @@ namespace UiDesktopApp1.Views.Pages
 
             System.Windows.Input.Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
 
-            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Eon");
-            string filePath = Path.Combine(folderPath, "Settings.ini");
+            string folderPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Eon");
+            string filePath = System.IO.Path.Combine(folderPath, "Settings.ini");
 
             string email = "";
             string password = "";
@@ -139,7 +141,7 @@ namespace UiDesktopApp1.Views.Pages
                 else
                 {
                    
-                    string SplashPath = Path.Combine(directory, "FortniteGame", "Content", "Splash", "Splash.bmp");
+                    string SplashPath = System.IO.Path.Combine(directory, "FortniteGame", "Content", "Splash", "Splash.bmp");
 
                     //             if (File.Exists(SplashPath))
                     //           {
@@ -179,7 +181,7 @@ namespace UiDesktopApp1.Views.Pages
 
                     Process.Start(new ProcessStartInfo
                     {
-                        FileName = Path.Combine(directoryPath, "EasyAntiCheat", "EasyAntiCheat_EOS_Setup.exe"),
+                        FileName = System.IO.Path.Combine(directoryPath, "EasyAntiCheat", "EasyAntiCheat_EOS_Setup.exe"),
                         WorkingDirectory = directoryPath,
                         CreateNoWindow = true,
                         UseShellExecute = false
@@ -187,7 +189,7 @@ namespace UiDesktopApp1.Views.Pages
 
                     Process.Start(new ProcessStartInfo
                     {
-                        FileName = Path.Combine(directoryPath, "EonEAC.exe"),
+                        FileName = System.IO.Path.Combine(directoryPath, "EonEAC.exe"),
                         WorkingDirectory = directoryPath,
                         CreateNoWindow = true,
                         UseShellExecute = false
@@ -254,11 +256,22 @@ namespace UiDesktopApp1.Views.Pages
                     SafeKillProcess("CrashReportClient");
 
                     Process proc = new Process();
-                    proc.StartInfo.FileName = directory + "\\FortniteGame\\Binaries\\Win64\\FortniteClient-Win64-Shipping.exe";
-                    proc.StartInfo.Arguments = $"-log -epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -skippatchcheck -noeac -fromfl=be -fltoken=7673cbd7dbe3e7fdfag3a4b2 -AUTH_LOGIN={email} -AUTH_PASSWORD={password} -AUTH_TYPE=epic";
+                    proc.StartInfo.FileName = directory + "\\FortniteGame\\Binaries\\Win64\\";
+                    proc.StartInfo.Arguments = $"FortniteClient-Win64-Shipping.exe -log -epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -skippatchcheck -noeac -fromfl=be -fltoken=7673cbd7dbe3e7fdfag3a4b2 -AUTH_LOGIN={email} -AUTH_PASSWORD={password} -AUTH_TYPE=epic";
+                    FakeAC.Start(directory, "FortniteClient-Win64-Shipping_BE.exe", $"-epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -noeac -fromfl=be -fltoken=h1cdhchd10150221h130eB56 -skippatchcheck", "r");
+                    FakeAC.Start(directory, "FortniteLauncher.exe", $"-epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -noeac -fromfl=be -fltoken=h1cdhchd10150221h130eB56 -skippatchcheck", "dsf");
                     proc.StartInfo.RedirectStandardOutput = false;
                     proc.StartInfo.UseShellExecute = false;
                     proc.Start();
+                    try
+                    {
+                        FakeAC._FNLauncherProcess.Close();
+                        FakeAC._FNAntiCheatProcess.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show("There Been A Error Closing");
+                    }
 
                     Inject(proc.Id, directory + "\\Redirect.dll");
                     Inject(proc.Id, directory + "\\Engine\\Binaries\\ThridParty\\NVIDIA\\NVaftermath\\Win64\\GFSDK_Aftermath_Lib.x64.dll");
@@ -413,8 +426,8 @@ namespace UiDesktopApp1.Views.Pages
         {
             System.Windows.Input.Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
 
-            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Luna");
-            string filePath = Path.Combine(folderPath, "Settings.ini");
+            string folderPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Eon");
+            string filePath = System.IO.Path.Combine(folderPath, "Settings.ini");
             string directory = "";
 
             if (File.Exists(filePath))
@@ -429,7 +442,7 @@ namespace UiDesktopApp1.Views.Pages
                 }
             }
 
-            string SplashPath = Path.Combine(directory, "FortniteGame", "Content", "Splash", "Splash.bmp");
+            string SplashPath = System.IO.Path.Combine(directory, "FortniteGame", "Content", "Splash", "Splash.bmp");
             string directoryPath = directory + "\\";
             string RarPath = directoryPath + "\\EonEAC.rar";
             //      string pakFilePath1 = directoryPath + "\\pakchunkLuxury-WindowsClient.pak";
