@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PpPG5QYNWDzpZutbYD5yBPL9t5UP7IXqF3gdDudgLXzeR8ff4WgQTIgry/HtmX/flNt3ky2yI04arSfUqLBgbQ==",
+  "dgSpecHash": "pqXuHO+aRjNsgyNRohEqT/HO3kwzpYFdKQaVkiy87spBblI3XTjQwIAEPkfCyP7lwQFma4hfrRUjDYZLstkexA==",
   "success": true,
-  "projectFilePath": "E:\\downloads\\ACLib\\LuxuryLauncher SRC 2 - Copia\\LuxuryLauncher SRC 2 - Copia - Copy\\UiDesktopApp1\\UiDesktopApp1.csproj",
+  "projectFilePath": "D:\\github\\EonWPFUILauncher\\UiDesktopApp1\\UiDesktopApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\discordrichpresence\\1.2.1.24\\discordrichpresence.1.2.1.24.nupkg.sha512",

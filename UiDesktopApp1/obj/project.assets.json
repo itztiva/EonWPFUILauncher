@@ -2095,11 +2095,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\downloads\\ACLib\\LuxuryLauncher SRC 2 - Copia\\LuxuryLauncher SRC 2 - Copia - Copy\\UiDesktopApp1\\UiDesktopApp1.csproj",
+      "projectUniqueName": "D:\\github\\EonWPFUILauncher\\UiDesktopApp1\\UiDesktopApp1.csproj",
       "projectName": "Luna",
-      "projectPath": "E:\\downloads\\ACLib\\LuxuryLauncher SRC 2 - Copia\\LuxuryLauncher SRC 2 - Copia - Copy\\UiDesktopApp1\\UiDesktopApp1.csproj",
+      "projectPath": "D:\\github\\EonWPFUILauncher\\UiDesktopApp1\\UiDesktopApp1.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "E:\\downloads\\ACLib\\LuxuryLauncher SRC 2 - Copia\\LuxuryLauncher SRC 2 - Copia - Copy\\UiDesktopApp1\\obj\\",
+      "outputPath": "D:\\github\\EonWPFUILauncher\\UiDesktopApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

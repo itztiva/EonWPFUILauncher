@@ -11,23 +11,23 @@ namespace Luxury
         private static RichPresence presence;
         public static void InitializeRPC()
         {
-            client = new DiscordRpcClient("1147913250684547092");
+            client = new DiscordRpcClient("1196967148090839151");
             client.Initialize();
-            Button[] buttons = { new Button() { Label = "Discord Server", Url = "https://dsc.gg/lunamp" }, new Button() { Label = "Download Launcher", Url = "https://www.google.com/search?q=not+available+at+the+moment" } };
+            Button[] buttons = { new Button() { Label = "Discord Server", Url = "https://discord.gg/eonfn" }, new Button() { Label = "Download Launcher", Url = "https://www.google.com/search?q=not+available+at+the+moment" } };
 
             presence = new RichPresence()
             {
-                Details = "",
+                Details = "Relive OG Fortnite Chapter 2 Season 2",
                 State = "",
                 Timestamps = rpctimestamp,
                 Buttons = buttons,
 
                 Assets = new Assets()
                 {
-                    LargeImageKey = "logo",
-                    LargeImageText = "Luna",
+                    LargeImageKey = "testlogo",
+                    LargeImageText = "Project Eon",
                     SmallImageKey = "",
-                    SmallImageText = ""
+                    SmallImageText = "Relive OG Fortnite"
                 }
             };
             SetState("");
