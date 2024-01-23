@@ -96,7 +96,7 @@ namespace Luna_Launch
 
         /// <summary>
         /// The following option flags are used with the InternetQueryOption and InternetSetOption functions.
-        /// </summary>
+        /// </summary>>
         internal enum InternetOptions : int
         {
             /// <summary>

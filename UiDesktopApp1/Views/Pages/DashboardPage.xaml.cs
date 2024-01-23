@@ -256,8 +256,8 @@ namespace UiDesktopApp1.Views.Pages
                     SafeKillProcess("CrashReportClient");
 
                     Process proc = new Process();
-                    proc.StartInfo.FileName = directory + "\\FortniteGame\\Binaries\\Win64\\";
-                    proc.StartInfo.Arguments = $"FortniteClient-Win64-Shipping.exe -log -epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -skippatchcheck -noeac -fromfl=be -fltoken=7673cbd7dbe3e7fdfag3a4b2 -AUTH_LOGIN={email} -AUTH_PASSWORD={password} -AUTH_TYPE=epic";
+                    proc.StartInfo.FileName = directory + "\\FortniteGame\\Binaries\\Win64\\FortniteClient-Win64-Shipping.exe";
+                    proc.StartInfo.Arguments = $"-log -epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -skippatchcheck -noeac -fromfl=be -fltoken=7673cbd7dbe3e7fdfag3a4b2 -AUTH_LOGIN={email} -AUTH_PASSWORD={password} -AUTH_TYPE=epic";
                     FakeAC.Start(directory, "FortniteClient-Win64-Shipping_BE.exe", $"-epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -noeac -fromfl=be -fltoken=h1cdhchd10150221h130eB56 -skippatchcheck", "r");
                     FakeAC.Start(directory, "FortniteLauncher.exe", $"-epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -noeac -fromfl=be -fltoken=h1cdhchd10150221h130eB56 -skippatchcheck", "dsf");
                     proc.StartInfo.RedirectStandardOutput = false;
