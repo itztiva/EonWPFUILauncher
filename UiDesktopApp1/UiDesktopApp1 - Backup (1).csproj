@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <AssemblyName>Luna</AssemblyName>
+    <RootNamespace>Eon</RootNamespace>
+    <PackageId>$(AssemblyName)</PackageId>
+    <Authors></Authors>
+    <Product>Luna Launcher</Product>
+    <PackageIcon></PackageIcon>
+    <Version>1.0.0</Version>
+    <ApplicationIcon>Logo1.ico</ApplicationIcon>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
+    <PackageReference Include="SharpCompress" Version="0.35.0" />
+    <PackageReference Include="WPF-UI" Version="3.0.0-preview.4" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1 " />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1 " />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Pages\12.png" />
+    <None Remove="Views\Pages\71.png" />
+    <None Remove="Views\Pages\download %281%29.png" />
+    <None Remove="Views\Pages\Grid Yellow.JPG" />
+    <None Remove="Views\Pages\newsback.png" />
+    <None Remove="Views\Pages\Splash.png" />
+    <None Remove="Views\Pages\W46k4w64w.png" />
+    <None Remove="Views\Windows\image.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Logo1.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\Pages\12.png" />
+    <Resource Include="Views\Pages\71.png" />
+    <Resource Include="Views\Pages\download (1).png" />
+    <Resource Include="Views\Pages\Grid Yellow.JPG" />
+    <Resource Include="Views\Pages\newsback.png" />
+    <Resource Include="Views\Pages\Splash.png" />
+    <Resource Include="Views\Pages\W46k4w64w.png" />
+    <Resource Include="Views\Windows\image.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UiDesktopApp1\Views\Pages\" />
+  </ItemGroup>
+
+</Project>

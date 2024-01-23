@@ -7,15 +7,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>True</UseWindowsForms>
-    <AssemblyName>Luna</AssemblyName>
-    <RootNamespace>Luna</RootNamespace>
-    <PackageId></PackageId>
+    <AssemblyName>Eon</AssemblyName>
+    <RootNamespace>Eon</RootNamespace>
+    <PackageId>$(AssemblyName)</PackageId>
     <Authors></Authors>
-    <Product>Luna Launcher</Product>
+    <Product>Eon Launcher</Product>
     <PackageIcon></PackageIcon>
     <Version>1.0.0</Version>
     <ApplicationIcon>Logo1.ico</ApplicationIcon>
     <NoWin32Manifest>true</NoWin32Manifest>
+    <Title>Eon</Title>
+    <Copyright>Tiva</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

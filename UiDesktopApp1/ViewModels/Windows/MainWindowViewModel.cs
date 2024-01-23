@@ -7,7 +7,7 @@ namespace UiDesktopApp1.ViewModels.Windows
     public partial class MainWindowViewModel : ObservableObject
     {
         [ObservableProperty]
-        private string _applicationTitle = "Luxury Launcher";
+        private string _applicationTitle = "Eon Launcher";
 
         [ObservableProperty]
         private ObservableCollection<object> _menuItems = new ObservableCollection<object>

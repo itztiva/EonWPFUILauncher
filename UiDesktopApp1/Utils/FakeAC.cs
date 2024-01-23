@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace UiDesktopApp1.Utils
 {
-    // Goofy Code Need To Improve On V2
+    
     public class FakeAC
     {
 		public static Process _FNLauncherProcess;

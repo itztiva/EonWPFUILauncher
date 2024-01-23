@@ -124,7 +124,7 @@ namespace UiDesktopApp1.Views.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Luna;component/views/pages/settingspage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Eon;component/views/pages/settingspage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Pages\SettingsPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

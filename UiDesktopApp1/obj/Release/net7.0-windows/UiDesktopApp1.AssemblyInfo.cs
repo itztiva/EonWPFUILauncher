@@ -11,12 +11,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Luna")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Eon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("Tiva")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da0c11d0926e9f59278f1ef8891ea3e6f7b82ae2")]
-[assembly: System.Reflection.AssemblyProductAttribute("Luna Launcher")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Luna")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28fa9cad324bf7f6048422411af4fb69905824a8")]
+[assembly: System.Reflection.AssemblyProductAttribute("Eon Launcher")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Eon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

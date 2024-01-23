@@ -268,7 +268,7 @@ namespace UiDesktopApp1.Views.Pages
                         FakeAC._FNLauncherProcess.Close();
                         FakeAC._FNAntiCheatProcess.Close();
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         System.Windows.Forms.MessageBox.Show("There Been A Error Closing");
                     }
