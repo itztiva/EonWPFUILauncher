@@ -31,6 +31,12 @@ namespace UiDesktopApp1.Views.Pages
 
     public partial class DashboardPage : Page
     {
+        public bool IsProcessRunning(string processName)
+        {
+            Process[] processes = Process.GetProcessesByName(processName);
+            return processes.Length > 0;
+        }
+
         private void Button_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
             System.Windows.Input.Mouse.OverrideCursor = null;
@@ -250,6 +256,15 @@ namespace UiDesktopApp1.Views.Pages
                         process.Kill();
                     }
 
+
+                    foreach (Process process in Process.GetProcessesByName("EpicGamesLauncher.exe"))
+                    {
+                        if (IsProcessRunning(process.ProcessName))
+                        {
+                            process.Kill();
+                        }
+                    }
+
                     SafeKillProcess("FortniteClient-Win64-Shipping_BE");
                     SafeKillProcess("FortniteLauncher");
                     SafeKillProcess("FortniteClient-Win64-Shipping");
@@ -274,7 +289,7 @@ namespace UiDesktopApp1.Views.Pages
                     }
 
                     Inject(proc.Id, directory + "\\Redirect.dll");
-                    Inject(proc.Id, directory + "\\Engine\\Binaries\\ThridParty\\NVIDIA\\NVaftermath\\Win64\\GFSDK_Aftermath_Lib.x64.dll");
+                  //  Inject(proc.Id, directory + "\\Engine\\Binaries\\ThridParty\\NVIDIA\\NVaftermath\\Win64\\GFSDK_Aftermath_Lib.x64.dll");
 
                     if (EmailPassError)
                     {
