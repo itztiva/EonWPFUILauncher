@@ -6,7 +6,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       Title="DashboardPage"
-      mc:Ignorable="d" Width="896" Height="349">
+      mc:Ignorable="d" Width="896" Height="500">
 
     <Grid Loaded="Page_Loaded" Margin="0,0,-62,-27">
         <Grid.ColumnDefinitions>
@@ -16,7 +16,14 @@
             <ColumnDefinition Width="290*"/>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="Label1_Copia" Margin="160,-220,116,-486" FontSize="18" Grid.ColumnSpan="4" RenderTransformOrigin="0.5,0.5">
+        <Grid Grid.ColumnSpan="4" Margin="10,-86,10,278">
+            <Border Background="#1a1e29" HorizontalAlignment="Center" VerticalAlignment="Top" Height="96" Width="806" CornerRadius="10" Margin="0,66,0,0" Opacity="0.7"/>
+            <Image x:Name="SkinImg" Margin="50,45,0,442" Stretch="UniformToFill" Width="136" Source="/Assets/Eon.png" RenderTransformOrigin="1.268,0.599" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="WelcomeText" Text="Welcome Back Player!" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" Foreground="White" Margin="209,66,0,0" />
+            <TextBlock Text="Enjoy your stay!" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="White" Margin="213,112,0,0" /> <!--thanks ploosh-->
+        </Grid>
+
+        <Label x:Name="Label1_Copia" Margin="38,-256,-6,-450" FontSize="18" Grid.ColumnSpan="4" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -36,7 +43,7 @@
             </Label.Foreground>
         </Label>
 
-        <Label x:Name="Label2" Content="Connecting to API..." HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Height="184" Width="528" FontSize="16" Background="{x:Null}" Grid.ColumnSpan="2" FontFamily="Cascadia Mono SemiBold"/>
+        <Label x:Name="Label2" Content="Connecting to API..." HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" Height="314" Width="528" FontSize="16" Background="{x:Null}" Grid.ColumnSpan="2" FontFamily="Cascadia Mono SemiBold"/>
 
         <Grid Margin="0,10,52,-9" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
@@ -85,11 +92,9 @@
                        Width="68" Click="button22_Click" FontSize="24" FontWeight="Bold" FontFamily="Bahnschrift" Cursor="Hand" Margin="846,197,0,0" VerticalAlignment="Top" Grid.Row="4" Background="#0FFFFFFF" Foreground="White" BorderBrush="White" />
 
             <Image x:Name="Image11" HorizontalAlignment="Left" Height="47" Margin="846,263,0,0" Grid.Row="4" VerticalAlignment="Top" Width="24" Source="/Views/Pages/71.png"/>
-
-            <ui:MenuItem HorizontalAlignment="Left" Header="Welcome Back Player!" Margin="255,-34,0,0" VerticalAlignment="Top" Height="48" Width="356" Foreground="White" FontSize="24" FontFamily="Yu Gothic UI Semibold" Grid.RowSpan="5"/>
         </Grid>
 
-        <Image HorizontalAlignment="Left" Height="229" Margin="98,218,0,0" VerticalAlignment="Top" Width="271" Source="https://api.lunafn.xyz/images/News.jpg" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1">
+        <Image HorizontalAlignment="Left" Height="188" Margin="96,239,0,0" VerticalAlignment="Top" Width="271" Source="https://api.lunafn.xyz/images/News.jpg" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.Column="1">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
