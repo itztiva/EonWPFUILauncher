@@ -285,7 +285,7 @@ namespace UiDesktopApp1.Views.Pages
                     }
                     catch (Exception)
                     {
-                        System.Windows.Forms.MessageBox.Show("There Been A Error Closing");
+                        System.Windows.Forms.MessageBox.Show("Erorr Occured Closing");
                     }
 
                     Inject(proc.Id, directory + "\\Redirect.dll");

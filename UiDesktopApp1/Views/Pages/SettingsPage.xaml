@@ -21,14 +21,15 @@
     </Page.Resources>
 
     <Grid Height="619" VerticalAlignment="Top">
-        <ui:Button x:Name="button14"
-                   Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
-                   Content="Verify files"
-                   Height="56"
-                   MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-                   Width="151" Click="button14_Click" FontSize="22" FontWeight="Bold" FontFamily="Bahnschrift" Cursor="Hand" Margin="649,10,0,0" VerticalAlignment="Top" />
+        <ui:Button
+            x:Name="button14"
+            Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
+            Content="Verify files"
+            Height="56"
+            MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
+            Width="151" Click="button14_Click" FontSize="22" FontWeight="Bold" FontFamily="Bahnschrift" Cursor="Hand" Margin="619,304,0,0" VerticalAlignment="Top" />
 
-        <StackPanel Margin="-68,16,476,226">
+        <StackPanel Margin="111,4,288,207">
             <Grid Width="443" Height="340">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -110,28 +111,28 @@
                     Height="50"
                     MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
                     Width="104" Click="button12_Click_1" FontFamily="Bahnschrift" FontWeight="Bold" FontSize="22" Margin="171,118,0,0" VerticalAlignment="Top" Cursor="Hand" />
-
                 <ui:Button
-                    x:Name="button13"
-                    Width="54"
-                    Height="48"
-                    Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
-                    MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-                    Click="Button_Click_13" RenderTransformOrigin="0.728,0.316" Margin="292,31,0,0" VerticalAlignment="Top" Grid.Row="1" Cursor="Hand">
-                    <ui:SymbolIcon Symbol="Eye12" FontSize="32" />
+            x:Name="button13"
+            Width="65"
+            Height="48"
+            Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
+            MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
+            Click="Button_Click_13" RenderTransformOrigin="0.728,0.316" Margin="303,19,0,0" VerticalAlignment="Top" Cursor="Hand" Grid.Row="1">
+                    <ui:SymbolIcon Symbol="Eye12" FontSize="32" VerticalAlignment="Center" Height="27" Width="44" />
                 </ui:Button>
             </Grid>
         </StackPanel>
 
-        <ui:Button x:Name="button16"
-           Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
-           Height="262" Width="201"
-           MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-           Click="button16_Click"
-           FontSize="22" FontWeight="Bold" FontFamily="Bahnschrift" Cursor="Hand"
-           Margin="373,50,0,0"
-           Background="#0FFFFFFF" Foreground="White" BorderBrush="White"
-           RenderTransformOrigin="1.097,0.649" Appearance="Primary" VerticalAlignment="Top">
+        <ui:Button
+            x:Name="button16"
+            Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
+            Height="262" Width="201"
+            MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
+            Click="button16_Click"
+            FontSize="22" FontWeight="Bold" FontFamily="Bahnschrift" Cursor="Hand"
+            Margin="593,14,0,0"
+            Background="#0FFFFFFF" Foreground="White" BorderBrush="White"
+            RenderTransformOrigin="1.097,0.649" Appearance="Primary" VerticalAlignment="Top">
 
             <Button.Content>
                 <StackPanel>
@@ -149,6 +150,7 @@
                 </TransformGroup>
             </ui:Button.RenderTransform>
         </ui:Button>
+
 
     </Grid>
 </Page>
