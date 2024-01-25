@@ -51,6 +51,7 @@
             Title=""
             Grid.Row="0"
             CloseWindowByDoubleClickOnIcon="True"/>
-        
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </ui:FluentWindow>

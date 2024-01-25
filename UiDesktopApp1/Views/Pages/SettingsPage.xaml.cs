@@ -9,6 +9,8 @@ using System;
 using DiscordRPC;
 using Luxury;
 using System.Diagnostics;
+using System.Security.Policy;
+using UiDesktopApp1.Views.Pages;
 
 namespace UiDesktopApp1.Views.Pages
 {
@@ -211,12 +213,21 @@ namespace UiDesktopApp1.Views.Pages
 
         private void button16_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start(new ProcessStartInfo
+     /*       try
             {
-                FileName = "https://cdn.fnbuilds.services/Fortnite%2012.41.zip",
-                UseShellExecute = true
-            });
+                // Create an instance of NewsPage directly
+                UiDesktopApp1.Views.Pages.NewsPage newsPage = new UiDesktopApp1.Views.Pages.NewsPage();
+                newsPage.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                // Show an error message using MessageBox
+     */         //  System.Windows.MessageBox.Show($"An error occurred: {ex.Message}", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+          //  }
         }
+
+
+
 
         private void button14_Click(object sender, RoutedEventArgs e)
         {

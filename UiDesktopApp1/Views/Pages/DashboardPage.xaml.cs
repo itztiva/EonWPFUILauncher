@@ -31,6 +31,7 @@ namespace UiDesktopApp1.Views.Pages
 
     public partial class DashboardPage : Page
     {
+
         public bool IsProcessRunning(string processName)
         {
             Process[] processes = Process.GetProcessesByName(processName);

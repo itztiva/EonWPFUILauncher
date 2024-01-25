@@ -137,7 +137,7 @@
             <Button.Content>
                 <StackPanel>
                     <Image Source="http://api.lunafn.xyz/images/fortniteseason4.jpg" Width="184" Height="248" Stretch="UniformToFill" />
-                    <TextBlock Text="Install" Foreground="#FFFF1717" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <TextBlock x:Name="hiii" Text="Install" Foreground="#FFFF1717" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </StackPanel>
             </Button.Content>
 

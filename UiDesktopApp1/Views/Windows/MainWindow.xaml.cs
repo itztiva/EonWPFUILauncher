@@ -1,4 +1,6 @@
-﻿using UiDesktopApp1.ViewModels.Windows;
+﻿using System.Windows.Controls;
+using UiDesktopApp1.ViewModels.Windows;
+using UiDesktopApp1.Views.Pages;
 using Wpf.Ui.Appearance;
 using Wpf.Ui.Controls;
 
@@ -39,6 +41,13 @@ namespace UiDesktopApp1.Views.Windows
             {
                 // Prevent the window from being maximized
                 WindowState = WindowState.Normal;
+            }
+            void NavigateToNewsPage()
+            {
+                if (MainFrame.Content is Frame frame)
+                {
+                    frame.NavigationService.Navigate(new NewsPage());
+                }
             }
         }
     }

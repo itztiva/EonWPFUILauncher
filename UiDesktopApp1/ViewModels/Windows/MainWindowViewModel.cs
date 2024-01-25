@@ -47,5 +47,5 @@ namespace UiDesktopApp1.ViewModels.Windows
         {
             new MenuItem { Header = "Home", Tag = "tray_home" }
         };
-    } 
-};
+    }
+}
