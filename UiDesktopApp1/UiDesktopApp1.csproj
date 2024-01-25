@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Eon.png" />
     <None Remove="Views\Pages\12.png" />
     <None Remove="Views\Pages\71.png" />
     <None Remove="Views\Pages\download %281%29.png" />
@@ -44,6 +45,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Eon.png" />
     <Resource Include="Views\Pages\12.png" />
     <Resource Include="Views\Pages\71.png" />
     <Resource Include="Views\Pages\download (1).png" />
