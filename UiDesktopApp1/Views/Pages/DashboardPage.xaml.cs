@@ -23,6 +23,7 @@ using SharpCompress.Archives;
 using System.Net.Http;
 using System.Reflection.Metadata;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
 using UiDesktopApp1.Utils;
 
 namespace UiDesktopApp1.Views.Pages
@@ -258,15 +259,56 @@ namespace UiDesktopApp1.Views.Pages
                     }
 
 
-                    foreach (Process process in Process.GetProcessesByName("EpicGamesLauncher.exe"))
+                    async Task KillEpicGamesLauncherProcessesAsync()
                     {
-                        if (IsProcessRunning(process.ProcessName))
+                        foreach (Process process in Process.GetProcessesByName("EpicGamesLauncher"))
                         {
-                            process.Kill();
+                            if (!process.HasExited)
+                            {
+                                await Task.Delay(20000);
+                                process.Kill();
+                            }
                         }
                     }
 
-                    SafeKillProcess("FortniteClient-Win64-Shipping_BE");
+
+
+                    static void Main(string[] args)
+                    {
+                        string filePath = "\\Fortnitegame\\Binaries\\Win64\\FortniteClient-Win64-Shipping.exe";
+                        string expectedHash = "78f00934fa00f0c184e6b0a7219048a17066f6bba6a13d4408735928f295cdfe";
+
+                        try
+                        {
+                            if (VerifyFileHash(filePath, expectedHash))
+                            {
+                                Console.WriteLine("File hash matches expected hash.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("File hash does not match expected hash. Exiting...");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"An error occurred: {ex.Message}");
+                        }
+                }
+
+                    static bool VerifyFileHash(string filePath, string expectedHash)
+                    {
+                        using (var sha256 = SHA256.Create())
+                        {
+                            using (var fileStream = File.OpenRead(filePath))
+                            {
+                                byte[] hash = sha256.ComputeHash(fileStream);
+                                string actualHash = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+                                return actualHash.Equals(expectedHash, StringComparison.OrdinalIgnoreCase);
+                            }
+                        }
+                    }
+
+                            SafeKillProcess("FortniteClient-Win64-Shipping_BE");
                     SafeKillProcess("FortniteLauncher");
                     SafeKillProcess("FortniteClient-Win64-Shipping");
                     SafeKillProcess("CrashReportClient");
@@ -288,6 +330,7 @@ namespace UiDesktopApp1.Views.Pages
                     {
                         System.Windows.Forms.MessageBox.Show("Erorr Occured Closing");
                     }
+
 
                     Inject(proc.Id, directory + "\\Redirect.dll");
                   //  Inject(proc.Id, directory + "\\Engine\\Binaries\\ThridParty\\NVIDIA\\NVaftermath\\Win64\\GFSDK_Aftermath_Lib.x64.dll");
