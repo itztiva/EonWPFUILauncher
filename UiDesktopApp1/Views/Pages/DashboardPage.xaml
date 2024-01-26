@@ -17,8 +17,8 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.ColumnSpan="4" Margin="10,-57,10,278">
-            <Border Background="#CAC6A0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="96" Width="478" CornerRadius="10" Margin="70,64,0,0" Opacity="0.5"/>
-            <Image x:Name="SkinImg" Margin="82,66,0,140" Stretch="UniformToFill" Width="92" Source="/Assets/Eon.png" RenderTransformOrigin="100.26,0.200" HorizontalAlignment="Left"/>
+            <Border Background="#27262A" HorizontalAlignment="Left" VerticalAlignment="Top" Height="96" Width="478" CornerRadius="10" Margin="70,64,0,0" Opacity="0.5"/>
+            <Image x:Name="SkinImg" Margin="82,62,0,144" Stretch="UniformToFill" Width="92" Source="https://api.lunafn.xyz/images/logo.png" RenderTransformOrigin="100.26,0.200" HorizontalAlignment="Left"/>
             <TextBlock x:Name="WelcomeText" Text="Welcome Back Player!" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" Foreground="White" Margin="209,66,0,0" />
             <TextBlock Text="Enjoy your stay!" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="White" Margin="213,112,0,0" />
         </Grid>

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Tiva")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+714780c8d7dbd378d5e359689fc008fcde27b820")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2cabaab7ba6b8c0d1544b0bafde9149a25e4c34")]
 [assembly: System.Reflection.AssemblyProductAttribute("Eon Launcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Eon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
