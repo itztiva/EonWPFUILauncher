@@ -1,5 +1,3 @@
-# Eon Launcher 
+# Eon Launcher src made by Itztiva
 
-Made using WPFUI 
-Coded by itztiva
-Being used by Eon Only for now.
+Fuck Eon and especially Custox
